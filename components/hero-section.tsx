@@ -47,13 +47,13 @@ export default function HeroSection() {
     return (
         <div className="max-w-7xl mx-auto px-4 py-2 sm:px-6 lg:px-8 mt-24 md:mt-32">
             <div className="relative w-full min-h-[85vh] md:min-h-[600px] rounded-3xl overflow-hidden flex flex-col justify-between">
-                <div className="absolute inset-0 bg-black/50 z-0"></div>
+                <div className="absolute inset-0 bg-black/50 z-10"></div>
                 <Image
                     src="/clubhouse_hero_image.webp"
                     alt="Hero Section"
                     width={1000}
                     height={600}
-                    className="absolute inset-0 w-full h-full object-cover -z-10"
+                    className="absolute inset-0 w-full h-full object-cover"
                 />
 
                 {/* Main Hero Content */}

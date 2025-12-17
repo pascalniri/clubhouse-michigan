@@ -119,7 +119,7 @@ export default function AppleNav() {
                     }`}
                 onMouseLeave={() => setActiveDropdown(null)}
             >
-                <div className="max-w-7xl mx-auto px-4 py-2 sm:px-6 lg:px-8">
+                <div className="max-w-7xl mx-auto px-4 py-2">
                     <div className="flex items-center justify-between h-16">
                         <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="cursor-pointer">
                             <Image src="/clubhouse_michigan_logo.webp" alt="Clubhouse Logo" width={80} height={80} />
