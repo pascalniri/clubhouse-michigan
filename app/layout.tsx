@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
-
+import { Providers } from "@/components/providers";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -10,11 +10,24 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: "Clubhouse Michigan",
-  description: "Clubhouse Michigan is a community-based service dedicated to supporting and empowering people living with mental illness, known as Clubhouse members.",
-  keywords: ["Clubhouse Michigan", "Clubhouse", "Michigan", "Mental Health", "Clubhouse Members", "Clubhouse Michigan", "Clubhouse Michigan", "Clubhouse Michigan", "Clubhouse Michigan", "Clubhouse Michigan"],
+  description:
+    "Clubhouse Michigan is a community-based service dedicated to supporting and empowering people living with mental illness, known as Clubhouse members.",
+  keywords: [
+    "Clubhouse Michigan",
+    "Clubhouse",
+    "Michigan",
+    "Mental Health",
+    "Clubhouse Members",
+    "Clubhouse Michigan",
+    "Clubhouse Michigan",
+    "Clubhouse Michigan",
+    "Clubhouse Michigan",
+    "Clubhouse Michigan",
+  ],
   openGraph: {
     title: "Clubhouse Michigan",
-    description: "Clubhouse Michigan is a community-based service dedicated to supporting and empowering people living with mental illness, known as Clubhouse members.",
+    description:
+      "Clubhouse Michigan is a community-based service dedicated to supporting and empowering people living with mental illness, known as Clubhouse members.",
     type: "website",
     url: "https://www.clubhousemichigan.org/",
     siteName: "Clubhouse Michigan",
@@ -36,10 +49,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${poppins.variable} antialiased text-sm`}
-      >
-        {children}
+      <body className={`${poppins.variable} antialiased text-sm`}>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );
