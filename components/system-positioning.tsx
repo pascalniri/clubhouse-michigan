@@ -16,14 +16,14 @@ export default function SystemPositioning() {
           {/* Decorative element */}
           <div className="absolute top-0 right-0 w-32 h-32 bg-[#923445] rounded-bl-full opacity-10 transform translate-x-10 -translate-y-10"></div>
 
-          <h2 className="text-4xl md:text-6xl font-bold text-brand-blue dark:text-white mb-8 relative z-10">
+          <h2 className="text-4xl md:text-5xl font-bold text-brand-blue dark:text-white mb-8 relative z-10">
             Why It Matters <br />
             <span className="font-script text-5xl md:text-[70px] text-[#923445] dark:text-[#FDE7E9]">
               In the Bigger Picture
             </span>
           </h2>
 
-          <div className="space-y-6 text-lg text-[#4A4A68] dark:text-gray-300 relative z-10 leading-relaxed">
+          <div className="space-y-6 text-sm text-[#4A4A68] dark:text-gray-300 relative z-10 leading-relaxed">
             <p>
               Within the behavioral health system, Clubhouses fill a critical
               gap. While crisis services stabilize individuals, they rarely

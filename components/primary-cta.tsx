@@ -13,21 +13,21 @@ export default function PrimaryCTA() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <h2 className="flex items-center justify-center text-center text-4xl md:text-6xl font-bold mb-6 tracking-tight text-white">
+          <h2 className="flex items-center justify-center text-center text-4xl md:text-5xl font-bold mb-6 tracking-tight text-white">
             Find Your{" "}
             <span className="font-script text-5xl md:text-[70px] text-white">
-               Clubhouse
+              Clubhouse
             </span>
           </h2>
-          <p className="text-lg text-white/90 mb-12 max-w-3xl mx-auto">
+          <p className="text-sm text-white/90 mb-12 max-w-3xl mx-auto">
             There are over 40 Clubhouses across Michigan. You belong here. Take
             the first step toward building a meaningful life today.
           </p>
 
           <div className="flex items-center justify-center">
             <button className=" flex flex-row items-center px-6 py-3 text-xs font-bold bg-brand-burgundy text-white shadow-lg hover:bg-[#a84457] transition-colors justify-center gap-2">
-            Start Now, Righ now!
-          </button>
+              Start Now, Righ now!
+            </button>
           </div>
         </motion.div>
       </div>

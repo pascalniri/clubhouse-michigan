@@ -97,7 +97,7 @@ export default function ProgramsSection() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-gray-600 dark:text-gray-400 text-lg leading-relaxed"
+            className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed"
           >
             We offer a comprehensive range of opportunities designed to help
             members regain confidence, skills, and independence. Our accredited

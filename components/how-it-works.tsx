@@ -3,6 +3,8 @@
 import { motion } from "framer-motion";
 import { Briefcase, Home, GraduationCap, HeartHandshake } from "lucide-react";
 import Link from "next/link";
+import TypingText from "@/components/typing-text";
+import Reveal from "@/components/reveal";
 
 const pillars = [
   {
@@ -37,20 +39,16 @@ export default function HowItWorks() {
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-24 items-center">
           {/* Left Text Content */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="w-full lg:w-1/2 text-white"
-          >
-            <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+          <Reveal className="w-full lg:w-1/2 text-white">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
               A proven, <br className="hidden lg:block" />
-              <span className="font-script text-5xl md:text-[70px] text-white/90">
-                evidence-based
-              </span>{" "}
+              <TypingText
+                text="evidence-based"
+                className="font-script text-5xl md:text-[70px] text-white/90"
+              />{" "}
               model.
             </h2>
-            <p className="text-lg text-white/90 leading-relaxed mb-8 max-w-lg">
+            <p className="text-sm text-white/90 leading-relaxed mb-8 max-w-lg">
               The Clubhouse Model centers on four main pillars that empower
               members to rebuild their lives, confidence, and purpose.
             </p>
@@ -60,29 +58,24 @@ export default function HowItWorks() {
                 FIND YOUR CLUBHOUSE
               </button>
             </Link>
-          </motion.div>
+          </Reveal>
 
           {/* Right Cards */}
           <div className="w-full lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-4">
             {pillars.map((pillar, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.1, duration: 0.5 }}
-                className="bg-white p-6 rounded-lg shadow-xl flex flex-col items-start"
-              >
-                <div className="w-12 h-12 bg-[#F4F4FA] rounded-full flex items-center justify-center mb-4">
-                  {pillar.icon}
+              <Reveal key={idx} delay={idx * 0.1}>
+                <div className="bg-white p-6 rounded-lg shadow-xl flex flex-col items-start h-full">
+                  <div className="w-12 h-12 bg-[#F4F4FA] rounded-full flex items-center justify-center mb-4">
+                    {pillar.icon}
+                  </div>
+                  <h3 className="text-xl font-bold text-brand-blue mb-2">
+                    {pillar.title}
+                  </h3>
+                  <p className="text-[#4A4A68] text-sm leading-relaxed font-medium">
+                    {pillar.description}
+                  </p>
                 </div>
-                <h3 className="text-xl font-bold text-brand-blue mb-2">
-                  {pillar.title}
-                </h3>
-                <p className="text-[#4A4A68] text-lg leading-relaxed font-medium">
-                  {pillar.description}
-                </p>
-              </motion.div>
+              </Reveal>
             ))}
           </div>
         </div>

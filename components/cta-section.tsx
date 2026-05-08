@@ -29,7 +29,9 @@ export default function CTASection() {
               transition={{ delay: 0.1 }}
               className="text-white/95 text-xl mb-12 leading-relaxed"
             >
-              Your involvement empowers individuals living with mental illness to find connection, purpose, and community. Join us in making a real difference.
+              Your involvement empowers individuals living with mental illness
+              to find connection, purpose, and community. Join us in making a
+              real difference.
             </motion.p>
 
             <div className="grid md:grid-cols-3 gap-6">
@@ -59,9 +61,11 @@ export default function CTASection() {
                   >
                     <Icon
                       size={32}
-                      className={item.primary ? "fill-rose-600 text-rose-600" : ""}
+                      className={
+                        item.primary ? "fill-rose-600 text-rose-600" : ""
+                      }
                     />
-                    <span className="text-lg">{item.title}</span>
+                    <span className="text-sm">{item.title}</span>
                   </motion.button>
                 );
               })}
