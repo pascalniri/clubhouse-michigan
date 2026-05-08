@@ -1,20 +1,30 @@
-import AboutSection from "@/components/about-section";
-import CTASection from "@/components/cta-section";
-import Footer from "@/components/footer";
-import HeroSection from "@/components/hero-section";
-import LocationPreview from "@/components/location-preview";
-import ProgramsSection from "@/components/programs-section";
 import Navigation from "@/components/navigation";
+import HeroSection from "@/components/hero-section";
+import WhatIsAClubhouse from "@/components/what-is-a-clubhouse";
+import HowItWorks from "@/components/how-it-works";
+import PhilosophicalTruth from "@/components/philosophical-truth";
+import OutcomesImpact from "@/components/outcomes-impact";
+import TheProblem from "@/components/the-problem";
+import SystemPositioning from "@/components/system-positioning";
+import OpportunityPolicy from "@/components/opportunity-policy";
+import PrimaryCTA from "@/components/primary-cta";
+import FinalCTA from "@/components/final-cta";
+import Footer from "@/components/footer";
 
 export default function Home() {
   return (
-    <main className="bg-white dark:bg-gray-950 min-h-screen">
+    <main className="bg-white min-h-screen font-sans">
       <Navigation />
       <HeroSection />
-      <AboutSection />
-      <ProgramsSection />
-      <LocationPreview />
-      <CTASection />
+      <PhilosophicalTruth />
+      <TheProblem />
+      <WhatIsAClubhouse />
+      <HowItWorks />
+      <OutcomesImpact />
+      <SystemPositioning />
+      <OpportunityPolicy />
+      <PrimaryCTA />
+      <FinalCTA />
       <Footer />
     </main>
   );

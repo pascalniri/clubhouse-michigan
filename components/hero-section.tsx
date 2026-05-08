@@ -1,176 +1,187 @@
 "use client";
 
-import {
-  ChevronRight,
-  Facebook,
-  Heart,
-  Instagram,
-  Twitter,
-} from "lucide-react";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { motion, Variants } from "framer-motion";
-
-const containerVariants: Variants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-      delayChildren: 0.2,
-    },
-  },
-};
-
-const itemVariants: Variants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.5, ease: "easeOut" },
-  },
-};
-
-const socialMedia = [
-  {
-    name: "Facebook",
-    icon: <Facebook size={16} />,
-    link: "https://www.facebook.com/clubhouse-michigan",
-  },
-  {
-    name: "Instagram",
-    icon: <Instagram size={16} />,
-    link: "https://www.instagram.com/clubhouse-michigan",
-  },
-  {
-    name: "Twitter",
-    icon: <Twitter size={16} />,
-    link: "https://twitter.com/clubhouse-michigan",
-  },
-];
+import { ArrowRight } from "lucide-react";
 
 export default function HeroSection() {
   return (
-    <div className="max-w-7xl mx-auto px-4 py-2 sm:px-6 lg:px-8 mt-24 md:mt-32">
-      <div className="relative w-full min-h-[85vh] md:min-h-[600px] rounded-3xl overflow-hidden flex flex-col justify-between">
-        <div className="absolute inset-0 bg-black/50 z-10"></div>
-        <Image
-          src="/clubhouse_hero_image.webp"
-          alt="Hero Section"
-          width={1000}
-          height={600}
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-
-        {/* Main Hero Content */}
-        <motion.div
-          className="relative z-10 flex flex-col md:flex-row w-full justify-between items-start pt-10 px-4 sm:px-8 lg:px-12"
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-        >
-          <div className="flex flex-col gap-4 max-w-2xl">
+    <>
+      <div className="relative w-full bg-[#923445] pt-40 pb-48 lg:pt-56 lg:pb-64 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col lg:flex-row items-start">
+          {/* Left Text Content */}
+          <div className="w-full lg:w-1/2 flex flex-col items-start z-20">
             <motion.h1
-              variants={itemVariants}
-              className="text-4xl md:text-5xl lg:text-[72px] font-semibold text-white leading-tight lg:leading-[1.1]"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-white text-5xl md:text-6xl lg:text-[70px] font-bold tracking-tight leading-tight"
             >
-              Welcome to Clubhouse Michigan
+              You deserve a <br />
+              <span className="font-script text-6xl md:text-7xl lg:text-[90px] font-normal tracking-wide leading-[0.8] mt-4 block text-white/90">
+                place to belong.
+              </span>
             </motion.h1>
+
             <motion.p
-              variants={itemVariants}
-              className="text-white/90 text-sm md:text-base leading-relaxed max-w-lg"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="mt-8 text-white text-lg leading-relaxed max-w-md font-medium"
             >
               A Clubhouse is a community-based service dedicated to supporting
-              and empowering people living with mental illness, known as
-              Clubhouse members.
+              and empowering people living with mental illness. We believe
+              recovery means building a meaningful life.
             </motion.p>
+
             <motion.div
-              variants={itemVariants}
-              className="flex items-center gap-3 flex-wrap mt-4 md:mt-6"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto mt-8"
             >
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-6 py-3 bg-[#9f2943] text-white text-sm font-medium rounded-full cursor-pointer transition-colors hover:bg-[#8a223a]"
-              >
-                Click to donate
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-6 py-3 flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/30 text-white text-sm font-medium rounded-full cursor-pointer transition-colors hover:bg-white/20"
-              >
-                <p>Learn more</p>
-                <ChevronRight size={16} />
-              </motion.button>
+              <Link href="#locate" className="w-full sm:w-auto">
+                <button className="w-full flex items-center justify-center md:block px-6 py-3 text-xs font-bold bg-brand-blue text-white  transition-colors hover:bg-[#1E3C5D] cursor-pointer">
+                  LOCATE A CLUBHOUSE
+                </button>
+              </Link>
+              <Link href="#donate" className="w-full sm:w-auto">
+                <button className="w-full flex items-center justify-center md:block px-6 py-3 text-xs font-bold bg-white text-brand-blue  transition-colors hover:bg-white/90 cursor-pointer">
+                  DONATE
+                </button>
+              </Link>
             </motion.div>
           </div>
 
-          <motion.div
-            variants={itemVariants}
-            className="hidden md:flex flex-col gap-3 mt-4 md:mt-0"
-          >
-            {socialMedia.map((media) => (
-              <Link
-                key={media.name}
-                href={media.link}
-                className="w-10 h-10 bg-[#9f2943] text-white rounded-full flex items-center justify-center hover:bg-[#8a223a] transition-colors"
-              >
-                {media.icon}
-              </Link>
-            ))}
-          </motion.div>
-        </motion.div>
+          {/* Right Floating Images */}
+          <div className="w-full lg:w-1/2 relative mt-20 lg:mt-0 h-[400px] lg:h-auto pointer-events-none z-10">
+            {/* Top Right Image */}
+            <motion.div
+              initial={{ opacity: 0, y: 50, rotate: 5 }}
+              animate={{ opacity: 1, y: 0, rotate: 12 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="absolute -top-10 right-10 md:right-32 w-48 h-56 md:w-56 md:h-64 bg-white p-2 shadow-2xl z-20"
+            >
+              <div className="relative w-full h-full">
+                <Image
+                  src="/CM+at+Shanty+Creek+Summer+2024.webp"
+                  alt="Clubhouse members at Shanty Creek"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </motion.div>
 
-        {/* Info Cards - Stack on mobile, row on desktop */}
-        <motion.div
-          className="relative z-10 w-full px-4 sm:px-6 lg:px-12 pb-6 md:pb-10 mt-8 md:mt-20"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6, duration: 0.6 }}
-        >
-          <div className="flex flex-col md:grid md:grid-cols-3 bg-white/95 dark:bg-gray-800/95 backdrop-blur-md rounded-xl shadow-xl overflow-hidden px-6 md:px-0 py-0 md:py-6">
-            <div className="flex flex-col gap-2 border-b md:border-b-0 md:border-r border-gray-200 dark:border-gray-700 p-6 md:p-8">
-              <span className="h-12 w-12 bg-[#9f2943]/10 dark:bg-[#9f2943]/20 text-[#9f2943] dark:text-[#ff5577] rounded-full flex items-center justify-center mb-2">
-                <Heart size={20} />
-              </span>
-              <h2 className="font-bold text-lg md:text-xl text-gray-900 dark:text-gray-100">
-                Who We Are
-              </h2>
-              <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
-                A Clubhouse is a community-based service dedicated to supporting
-                and empowering people living with mental illness.
-              </p>
-            </div>
+            {/* Middle Left Image */}
+            <motion.div
+              initial={{ opacity: 0, x: -50, rotate: -15 }}
+              animate={{ opacity: 1, x: 0, rotate: -8 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="absolute top-20 -left-4 md:-left-12 w-40 h-48 md:w-48 md:h-56 bg-white p-2 shadow-2xl z-30"
+            >
+              <div className="relative w-full h-full">
+                <Image
+                  src="/bayside+9.webp"
+                  alt="Bayside Clubhouse members"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </motion.div>
 
-            <div className="flex flex-col gap-2 border-b md:border-b-0 md:border-r border-gray-200 dark:border-gray-700 p-6 md:p-8">
-              <span className="h-12 w-12 bg-[#9f2943]/10 dark:bg-[#9f2943]/20 text-[#9f2943] dark:text-[#ff5577] rounded-full flex items-center justify-center mb-2">
-                <Heart size={20} />
-              </span>
-              <h2 className="font-bold text-lg md:text-xl text-gray-900 dark:text-gray-100">
-                What We Do
-              </h2>
-              <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
-                Providing a supportive environment where members can regain
-                their confidence and skills through meaningful work.
-              </p>
-            </div>
+            {/* Center Image */}
+            <motion.div
+              initial={{ opacity: 0, y: 50, rotate: 0 }}
+              animate={{ opacity: 1, y: 0, rotate: -2 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+              className="absolute top-32 left-32 md:left-40 w-44 h-52 md:w-52 md:h-60 bg-white p-2 shadow-2xl z-10"
+            >
+              <div className="relative w-full h-full">
+                <Image
+                  src="/clubhouse_hero_image.webp"
+                  alt="Clubhouse community gathering"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </motion.div>
 
-            <div className="flex flex-col gap-2 p-6 md:p-8">
-              <span className="h-12 w-12 bg-[#9f2943]/10 dark:bg-[#9f2943]/20 text-[#9f2943] dark:text-[#ff5577] rounded-full flex items-center justify-center mb-2">
-                <Heart size={20} />
-              </span>
-              <h2 className="font-bold text-lg md:text-xl text-gray-900 dark:text-gray-100">
-                Our Impact
-              </h2>
-              <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
-                Empowering individuals to lead fulfilling lives by providing
-                education, employment, and housing opportunities.
-              </p>
-            </div>
+            {/* Bottom Left Image */}
+            <motion.div
+              initial={{ opacity: 0, y: 50, rotate: -5 }}
+              animate={{ opacity: 1, y: 0, rotate: -6 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              className="absolute top-64 left-10 md:left-20 w-48 h-56 md:w-56 md:h-64 bg-white p-2 shadow-2xl z-40"
+            >
+              <div className="relative w-full h-full">
+                <Image
+                  src="/wild+dawgz.webp"
+                  alt="Wild Dawgz Clubhouse group"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </motion.div>
+
+            {/* Bottom Right Image */}
+            <motion.div
+              initial={{ opacity: 0, y: 50, rotate: 15 }}
+              animate={{ opacity: 1, y: 0, rotate: 8 }}
+              transition={{ duration: 0.8, delay: 0.7 }}
+              className="absolute top-56 right-0 md:right-10 w-44 h-52 md:w-52 md:h-60 bg-white p-2 shadow-2xl z-30"
+            >
+              <div className="relative w-full h-full">
+                <Image
+                  src="/clubhouse_michigan_hero.webp"
+                  alt="Clubhouse Michigan members"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </motion.div>
           </div>
+        </div>
+      </div>
+
+      {/* Overlapping Information Card */}
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-24 md:-mt-32 z-50 mb-20 flex justify-center lg:justify-start lg:pl-32">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.8 }}
+          className="bg-[#F4F4FA] p-8 md:p-12 w-full max-w-2xl text-center flex flex-col items-center justify-center shadow-lg"
+        >
+          <h2 className="text-xl md:text-2xl font-bold text-brand-blue mb-4">
+            Discover the Clubhouse Impact
+          </h2>
+          <p className="text-[#4A4A68] mb-8 leading-relaxed max-w-lg">
+            Our latest state-wide survey shows how access to employment,
+            education, and community drastically improves the lives of those
+            living with mental illness.
+          </p>
+          <Link href="#impact">
+            <button className="bg-brand-blue hover:bg-[#1E3C5D] text-white px-6 cursor-pointer py-3 font-bold text-xs tracking-wide transition-colors">
+              READ THE REPORT
+            </button>
+          </Link>
         </motion.div>
       </div>
-    </div>
+
+      {/* "Here for you" Section */}
+      <div className="max-w-4xl mx-auto px-4 py-16 text-center">
+        <h2 className="text-3xl md:text-6xl font-bold text-brand-blue mb-2">
+          Clubhouse Michigan is here for you.
+        </h2>
+        <h2 className="font-script text-5xl md:text-7xl text-[#923445] mb-8 leading-none">
+          every single day.
+        </h2>
+        <p className="text-lg text-[#4A4A68] max-w-2xl mx-auto leading-relaxed">
+          The Clubhouse model is an evidence-based approach where people living
+          with mental illness can find a supportive community, rebuild their
+          confidence, and return to work or school.
+        </p>
+      </div>
+    </>
   );
 }
