@@ -17,18 +17,18 @@ export default function OpportunityPolicy() {
           <div className="inline-block px-4 py-2 bg-[#F4F4FA] text-[#7B5BF2] font-semibold rounded-full text-sm mb-6">
             Advocacy & Policy
           </div>
-          <h2 className="text-4xl md:text-6xl font-bold text-brand-blue mb-6 leading-tight">
+          <h2 className="text-4xl md:text-5xl font-bold text-brand-blue mb-6 leading-tight">
             An Opportunity for <br />
             <span className="font-script text-5xl md:text-[70px] text-brand-burgundy">
               Lasting Change.
             </span>
           </h2>
-          <p className="text-lg text-[#4A4A68] leading-relaxed mb-8">
+          <p className="text-sm text-[#4A4A68] leading-relaxed mb-8">
             When we invest in the Clubhouse Model, we aren't just funding a
             program—we are building an infrastructure of care that transforms
             communities.
           </p>
-          <p className="text-lg text-[#4A4A68] leading-relaxed mb-8">
+          <p className="text-sm text-[#4A4A68] leading-relaxed mb-8">
             Partnering with policymakers, healthcare systems, and community
             leaders, we advocate for structural changes that prioritize
             meaningful rehabilitation. Together, we can ensure every person

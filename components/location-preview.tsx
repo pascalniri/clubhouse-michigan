@@ -32,7 +32,7 @@ export default function LocationPreview() {
                   Michigan
                 </span>
               </h2>
-              <p className="text-gray-300 text-lg mb-8 max-w-xl leading-relaxed">
+              <p className="text-gray-300 text-sm mb-8 max-w-xl leading-relaxed">
                 With over{" "}
                 <span className="text-white font-bold">
                   40 direct service Clubhouses

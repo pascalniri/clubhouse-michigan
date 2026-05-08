@@ -29,7 +29,7 @@ export default function Footer() {
               <h5 className="text-sm font-bold uppercase tracking-widest text-[#923445]">
                 Our Purpose
               </h5>
-              <p className="text-white/70 leading-relaxed text-lg">
+              <p className="text-white/70 leading-relaxed text-sm">
                 To develop and expand Michigan Clubhouses, empower members in
                 their recovery, and create societal change for people living
                 with mental illness.
@@ -39,7 +39,7 @@ export default function Footer() {
               <h5 className="text-sm font-bold uppercase tracking-widest text-[#923445]">
                 Our Mission
               </h5>
-              <p className="text-white/70 leading-relaxed text-lg">
+              <p className="text-white/70 leading-relaxed text-sm">
                 Committed to strengthening and growing Michigan's Clubhouse
                 International Accredited Clubhouses through education, advocacy,
                 and collaborative relationships that foster the goals of
@@ -61,7 +61,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-bold mb-6 text-white">Quick Links</h4>
+            <h4 className="text-sm font-bold mb-6 text-white">Quick Links</h4>
             <ul className="space-y-4">
               {[
                 { name: "Home", href: "/" },
@@ -84,7 +84,7 @@ export default function Footer() {
 
           {/* Resources */}
           <div>
-            <h4 className="text-lg font-bold mb-6 text-white">Resources</h4>
+            <h4 className="text-sm font-bold mb-6 text-white">Resources</h4>
             <ul className="space-y-4">
               {[
                 "Member Resources",
@@ -107,7 +107,7 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="text-lg font-bold mb-6 text-white">Contact Us</h4>
+            <h4 className="text-sm font-bold mb-6 text-white">Contact Us</h4>
             <ul className="space-y-4 text-white/70">
               <li className="flex items-start gap-3">
                 <Mail size={20} className="mt-1 text-[#923445]" />
@@ -133,7 +133,7 @@ export default function Footer() {
           <div className="flex items-center gap-2">
             <span>Designed with</span>
             <Heart size={14} className="text-[#923445] fill-[#923445]" />
-            <span className="font-script text-white/80 text-lg">
+            <span className="font-script text-white/80 text-sm">
               for the Community
             </span>
           </div>

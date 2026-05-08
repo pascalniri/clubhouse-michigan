@@ -77,7 +77,7 @@ export default function AboutSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-gray-600 dark:text-gray-400 text-lg leading-relaxed"
+            className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed"
           >
             A Clubhouse is a community-based service dedicated to supporting and
             empowering people living with mental illness. We believe that every

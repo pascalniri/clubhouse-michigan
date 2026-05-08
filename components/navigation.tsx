@@ -150,7 +150,7 @@ export default function Navigation() {
                     <Link
                       href={item.href}
                       onClick={() => setIsOpen(false)}
-                      className="flex items-center gap-4 py-4 text-lg font-bold text-gray-900 dark:text-white border-b border-gray-50 dark:border-gray-800"
+                      className="flex items-center gap-4 py-4 text-sm font-bold text-gray-900 dark:text-white border-b border-gray-50 dark:border-gray-800"
                     >
                       <item.icon size={20} className="text-brand-blue" />
                       {item.name}
@@ -159,7 +159,9 @@ export default function Navigation() {
                 ))}
                 <div className="flex flex-col gap-6 pt-8">
                   <div className="flex items-center justify-between">
-                    <span className="text-sm font-medium text-gray-500">Appearance</span>
+                    <span className="text-sm font-medium text-gray-500">
+                      Appearance
+                    </span>
                     <ThemeToggle />
                   </div>
                   <button className="w-full flex items-center justify-center px-6 py-4 text-xs font-bold bg-brand-blue text-white uppercase tracking-widest transition-colors hover:bg-[#1E3C5D]">

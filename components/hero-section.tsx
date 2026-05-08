@@ -3,7 +3,8 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import TypingText from "@/components/typing-text";
+import Reveal from "@/components/reveal";
 
 export default function HeroSection() {
   return (
@@ -16,19 +17,21 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="text-white text-5xl md:text-6xl lg:text-[70px] font-bold tracking-tight leading-tight"
+              className="text-white text-5xl md:text-5xl lg:text-[70px] font-bold tracking-tight leading-tight"
             >
               You deserve a <br />
-              <span className="font-script text-6xl md:text-7xl lg:text-[90px] font-normal tracking-wide leading-[0.8] mt-4 block text-white/90">
-                place to belong.
-              </span>
+              <TypingText
+                text="place to belong."
+                className="font-script text-6xl md:text-7xl lg:text-[90px] font-normal tracking-wide leading-[0.8] mt-4 block text-white/90"
+                delay={0.6}
+              />
             </motion.h1>
 
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="mt-8 text-white text-lg leading-relaxed max-w-md font-medium"
+              className="mt-8 text-white text-sm leading-relaxed max-w-md font-medium"
             >
               A Clubhouse is a community-based service dedicated to supporting
               and empowering people living with mental illness. We believe
@@ -146,11 +149,9 @@ export default function HeroSection() {
 
       {/* Overlapping Information Card */}
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-24 md:-mt-32 z-50 mb-20 flex justify-center lg:justify-start lg:pl-32">
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
+        <Reveal
           className="bg-[#F4F4FA] p-8 md:p-12 w-full max-w-2xl text-center flex flex-col items-center justify-center shadow-lg"
+          delay={0.8}
         >
           <h2 className="text-xl md:text-2xl font-bold text-brand-blue mb-4">
             Discover the Clubhouse Impact
@@ -165,22 +166,25 @@ export default function HeroSection() {
               READ THE REPORT
             </button>
           </Link>
-        </motion.div>
+        </Reveal>
       </div>
 
       {/* "Here for you" Section */}
       <div className="max-w-4xl mx-auto px-4 py-16 text-center">
-        <h2 className="text-3xl md:text-6xl font-bold text-brand-blue mb-2">
-          Clubhouse Michigan is here for you.
-        </h2>
-        <h2 className="font-script text-5xl md:text-7xl text-[#923445] mb-8 leading-none">
-          every single day.
-        </h2>
-        <p className="text-lg text-[#4A4A68] max-w-2xl mx-auto leading-relaxed">
-          The Clubhouse model is an evidence-based approach where people living
-          with mental illness can find a supportive community, rebuild their
-          confidence, and return to work or school.
-        </p>
+        <Reveal>
+          <h2 className="text-3xl md:text-5xl font-bold text-brand-blue mb-2">
+            Clubhouse Michigan is here for you.
+          </h2>
+          <TypingText
+            text="every single day."
+            className="font-script text-5xl md:text-7xl text-brand-burgundy mb-8 block leading-none"
+          />
+          <p className="text-sm text-[#4A4A68] max-w-2xl mx-auto leading-relaxed mt-4">
+            The Clubhouse model is an evidence-based approach where people
+            living with mental illness can find a supportive community, rebuild
+            their confidence, and return to work or school.
+          </p>
+        </Reveal>
       </div>
     </>
   );

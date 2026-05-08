@@ -13,13 +13,13 @@ export default function FinalCTA() {
           viewport={{ once: true }}
           className="bg-[#F4F4FA] dark:bg-gray-900 rounded-lg p-12 md:p-20 shadow-sm border border-gray-100 dark:border-gray-800"
         >
-          <h2 className="text-4xl md:text-6xl font-bold text-brand-blue dark:text-white mb-6 tracking-tight">
+          <h2 className="text-4xl md:text-5xl font-bold text-brand-blue dark:text-white mb-6 tracking-tight">
             Everyone deserves a <br />
             <span className="font-script text-5xl md:text-[70px] text-[#923445] dark:text-[#FDE7E9] block mt-2">
               meaningful life.
             </span>
           </h2>
-          <p className="text-lg text-[#4A4A68] dark:text-gray-300 mb-12 max-w-2xl mx-auto font-medium leading-relaxed">
+          <p className="text-sm text-[#4A4A68] dark:text-gray-300 mb-12 max-w-2xl mx-auto font-medium leading-relaxed">
             Whether you are looking for support, want to help a loved one, or
             are a partner in the community—there is a place for you here.
           </p>
