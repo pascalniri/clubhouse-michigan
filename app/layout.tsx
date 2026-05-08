@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import { Shadows_Into_Light } from "next/font/google";
 import "./globals.css";
 import { Providers } from "@/components/providers";
 
-const poppins = Poppins({
-  variable: "--font-poppins",
-  weight: ["400", "500", "600", "700", "800", "900"],
+const shadowsIntoLight = Shadows_Into_Light({
+  variable: "--font-shadows-into-light",
+  weight: "400",
+  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
@@ -18,11 +19,6 @@ export const metadata: Metadata = {
     "Michigan",
     "Mental Health",
     "Clubhouse Members",
-    "Clubhouse Michigan",
-    "Clubhouse Michigan",
-    "Clubhouse Michigan",
-    "Clubhouse Michigan",
-    "Clubhouse Michigan",
   ],
   openGraph: {
     title: "Clubhouse Michigan",
@@ -49,7 +45,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.variable} antialiased text-sm`}>
+      <body
+        className={`${shadowsIntoLight.variable} antialiased text-sm font-sans`}
+      >
         <Providers>{children}</Providers>
       </body>
     </html>
