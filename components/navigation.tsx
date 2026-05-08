@@ -18,9 +18,9 @@ import Link from "next/link";
 const navItems = [
   { name: "Home", icon: Home, href: "/" },
   { name: "Member Stories", icon: Users, href: "/member-stories" },
-  { name: "Job Postings", icon: Briefcase, href: "#" },
-  { name: "News & Media", icon: Newspaper, href: "#" },
-  { name: "Contact", icon: Phone, href: "#" },
+  { name: "Job Postings", icon: Briefcase, href: "/jobs" },
+  { name: "News & Media", icon: Newspaper, href: "/news" },
+  { name: "Contact", icon: Phone, href: "/contact" },
 ];
 
 const animations = {

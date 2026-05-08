@@ -64,18 +64,18 @@ export default function Footer() {
             <h4 className="text-lg font-bold mb-6 text-white">Quick Links</h4>
             <ul className="space-y-4">
               {[
-                "About Us",
-                "Our Programs",
-                "Success Stories",
-                "Find a Clubhouse",
-                "News & Events",
+                { name: "Home", href: "/" },
+                { name: "Member Stories", href: "/member-stories" },
+                { name: "Job Postings", href: "/jobs" },
+                { name: "News & Media", href: "/news" },
+                { name: "Contact Us", href: "/contact" },
               ].map((link, i) => (
                 <li key={i}>
                   <Link
-                    href="#"
+                    href={link.href}
                     className="text-white/70 hover:text-[#923445] transition-colors"
                   >
-                    {link}
+                    {link.name}
                   </Link>
                 </li>
               ))}
@@ -111,7 +111,7 @@ export default function Footer() {
             <ul className="space-y-4 text-white/70">
               <li className="flex items-start gap-3">
                 <Mail size={20} className="mt-1 text-[#923445]" />
-                <span>website@clubhousemichigan.org</span>
+                <span>info@clubhousemichigan.org</span>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin size={20} className="mt-1 text-[#923445]" />
@@ -119,7 +119,7 @@ export default function Footer() {
               </li>
               <li className="flex items-start gap-3">
                 <Phone size={20} className="mt-1 text-[#923445]" />
-                <span>(555) 123-4567</span>
+                <span>(517) 555-0123</span>
               </li>
             </ul>
           </div>
