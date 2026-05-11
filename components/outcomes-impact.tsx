@@ -52,7 +52,7 @@ export default function OutcomesImpact() {
                 <div className="text-5xl font-bold text-[#FFD166] mb-4 group-hover:scale-110 transition-transform">
                   {stat.value}
                 </div>
-                <div className="text-xl font-bold text-white mb-2 uppercase tracking-widest">
+                <div className="text-xl font-bold text-white mb-2 ">
                   {stat.label}
                 </div>
                 <div className="text-white/70 text-lg leading-relaxed font-medium">

@@ -7,6 +7,7 @@ import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 import TypingText from "@/components/typing-text";
 import Reveal from "@/components/reveal";
+import { Button } from "@/components/ui/button";
 
 const storyCategories = [
   {
@@ -54,12 +55,12 @@ export default function MemberStoriesPage() {
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-white text-5xl md:text-5xl lg:text-[70px] font-bold tracking-tight leading-tight"
+            className="text-white text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-tight"
           >
             Real People. <br />
             <TypingText
               text="Real Recovery."
-              className="font-script text-6xl md:text-7xl lg:text-[90px] font-normal tracking-wide text-white/90"
+              className="font-script text-6xl md:text-7xl lg:text-9xl font-normal tracking-wide text-white/90"
               delay={0.5}
             />
           </motion.h1>
@@ -103,7 +104,7 @@ export default function MemberStoriesPage() {
                       </div>
 
                       <h2
-                        className={`text-3xl md:text-4xl font-bold mb-4 ${category.accent}`}
+                        className={`text-3xl md:text-5xl font-bold mb-4 ${category.accent}`}
                       >
                         {category.title}
                       </h2>
@@ -111,7 +112,7 @@ export default function MemberStoriesPage() {
                         {category.description}
                       </p>
 
-                      <div className="inline-flex items-center gap-2 text-xs font-bold tracking-widest uppercase text-brand-blue group-hover:gap-4 transition-all">
+                      <div className="inline-flex items-center gap-2 text-xs font-bold tracking-widest  text-brand-blue group-hover:gap-4 transition-all">
                         Read Stories <span>&rarr;</span>
                       </div>
                     </div>
@@ -133,9 +134,9 @@ export default function MemberStoriesPage() {
             Your journey could be the inspiration someone else needs to take
             their first step toward recovery. We would love to hear from you.
           </p>
-          <button className="px-8 py-4 text-xs font-bold bg-brand-burgundy text-white tracking-widest uppercase transition-colors hover:bg-[#7D2D3B]">
+          <Button variant="burgundy" size="lg">
             SHARE YOUR STORY
-          </button>
+          </Button>
         </Reveal>
       </section>
 

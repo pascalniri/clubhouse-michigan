@@ -68,7 +68,7 @@ export default function LocationPreview() {
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              className="w-full h-full bg-[#0B527F] backdrop-blur-sm rounded-3xl border border-white/10 p-8 relative overflow-hidden"
+              className="w-full h-full bg-[#0B527F] backdrop-blur-sm rounded border border-white/10 p-8 relative overflow-hidden"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-[#0B527F]/20 to-transparent" />
 

@@ -10,7 +10,6 @@ import {
   Phone,
   Heart,
 } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 
 export default function Footer() {
@@ -21,14 +20,12 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="space-y-6">
             <div className="flex items-center gap-2">
-              <span className="font-bold text-2xl tracking-tight">
+              <span className="font-bold text-2xl tracking-tight text-white">
                 Clubhouse Michigan
               </span>
             </div>
             <div className="space-y-4">
-              <h5 className="text-sm font-bold uppercase tracking-widest text-[#923445]">
-                Our Purpose
-              </h5>
+              <h5 className="text-sm font-bold  text-[#923445]">Our Purpose</h5>
               <p className="text-white/70 leading-relaxed text-sm">
                 To develop and expand Michigan Clubhouses, empower members in
                 their recovery, and create societal change for people living
@@ -36,9 +33,7 @@ export default function Footer() {
               </p>
             </div>
             <div className="space-y-4">
-              <h5 className="text-sm font-bold uppercase tracking-widest text-[#923445]">
-                Our Mission
-              </h5>
+              <h5 className="text-sm font-bold  text-[#923445]">Our Mission</h5>
               <p className="text-white/70 leading-relaxed text-sm">
                 Committed to strengthening and growing Michigan's Clubhouse
                 International Accredited Clubhouses through education, advocacy,
@@ -61,7 +56,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-sm font-bold mb-6 text-white">Quick Links</h4>
+            <h4 className="text-sm font-bold mb-6 text-white ">Quick Links</h4>
             <ul className="space-y-4">
               {[
                 { name: "Home", href: "/" },
@@ -73,8 +68,9 @@ export default function Footer() {
                 <li key={i}>
                   <Link
                     href={link.href}
-                    className="text-white/70 hover:text-[#923445] transition-colors"
+                    className="text-white/70 hover:text-[#923445] transition-colors flex items-center gap-2 group"
                   >
+                    <span className="w-0 h-0.5 bg-brand-burgundy transition-all group-hover:w-4" />
                     {link.name}
                   </Link>
                 </li>
@@ -84,21 +80,22 @@ export default function Footer() {
 
           {/* Resources */}
           <div>
-            <h4 className="text-sm font-bold mb-6 text-white">Resources</h4>
+            <h4 className="text-sm font-bold mb-6 text-white ">Resources</h4>
             <ul className="space-y-4">
               {[
-                "Member Resources",
-                "Family Support",
-                "Advocacy",
-                "Partner Portal",
-                "Privacy Policy",
+                { name: "Member Resources", href: "/resources/members" },
+                { name: "Family Support", href: "/resources/families" },
+                { name: "Advocacy", href: "/advocacy" },
+                { name: "Partner Portal", href: "/partners" },
+                { name: "Privacy Policy", href: "/privacy" },
               ].map((link, i) => (
                 <li key={i}>
                   <Link
-                    href="#"
-                    className="text-white/70 hover:text-[#923445] transition-colors"
+                    href={link.href}
+                    className="text-white/70 hover:text-[#923445] transition-colors flex items-center gap-2 group"
                   >
-                    {link}
+                    <span className="w-0 h-0.5 bg-brand-burgundy transition-all group-hover:w-4" />
+                    {link.name}
                   </Link>
                 </li>
               ))}
@@ -107,7 +104,7 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="text-sm font-bold mb-6 text-white">Contact Us</h4>
+            <h4 className="text-sm font-bold mb-6 text-white ">Contact Us</h4>
             <ul className="space-y-4 text-white/70">
               <li className="flex items-start gap-3">
                 <Mail size={20} className="mt-1 text-[#923445]" />

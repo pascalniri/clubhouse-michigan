@@ -13,6 +13,7 @@ import {
   BookOpen,
   Download,
 } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const Reveal = ({
   children,
@@ -121,7 +122,7 @@ export default function NewsPage() {
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.2 }}
-                  className="text-xs font-bold uppercase tracking-[0.4em] text-blue-300"
+                  className="text-xs font-bold  text-blue-300"
                 >
                   Clubhouse Blog
                 </motion.p>
@@ -172,10 +173,13 @@ export default function NewsPage() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <Reveal className="relative group w-full md:w-auto">
-              <button className="flex items-center gap-4 px-6 py-3 bg-gray-50 dark:bg-gray-900 text-xs font-bold uppercase tracking-widest border border-gray-200 dark:border-gray-700 w-full md:w-auto justify-between">
+              <Button
+                variant="outline"
+                className="w-full md:w-auto justify-between"
+              >
                 Sort By: Newest to Oldest
                 <ChevronDown size={14} className="text-brand-blue" />
-              </button>
+              </Button>
             </Reveal>
             <Reveal
               delay={0.2}
@@ -187,12 +191,13 @@ export default function NewsPage() {
                 "Policy Updates",
                 "Events",
               ].map((cat, i) => (
-                <button
+                <Button
                   key={i}
-                  className={`text-[10px] font-bold uppercase tracking-widest whitespace-nowrap pb-2 border-b-2 transition-all ${i === 0 ? "text-brand-blue border-brand-blue" : "text-gray-400 border-transparent hover:text-gray-600"}`}
+                  variant="ghost"
+                  className={`text-[10px] font-bold  whitespace-nowrap h-auto py-2 rounded-none border-b-2 transition-all ${i === 0 ? "text-brand-blue border-brand-blue" : "text-gray-400 border-transparent hover:text-gray-600"}`}
                 >
                   {cat}
-                </button>
+                </Button>
               ))}
             </Reveal>
           </div>
@@ -214,20 +219,20 @@ export default function NewsPage() {
                     />
                   </div>
                   <div className="p-8 flex flex-col flex-1 bg-white dark:bg-gray-900">
-                    <span className="text-[10px] font-bold text-gray-400 uppercase tracking-[0.2em] mb-4 block">
+                    <span className="text-[10px] font-bold text-gray-400  mb-4 block">
                       Blog
                     </span>
-                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4 group-hover:text-brand-blue transition-colors leading-tight">
+                    <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-4 group-hover:text-brand-blue transition-colors leading-tight">
                       {article.title}
                     </h3>
                     <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed mb-8 flex-1">
                       {article.excerpt}
                     </p>
                     <div className="pt-6 border-t border-gray-50 dark:border-gray-800 flex items-center justify-between">
-                      <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">
+                      <span className="text-[10px] font-bold text-gray-400 ">
                         {article.date}
                       </span>
-                      <div className="flex items-center gap-2 text-brand-blue font-bold text-[10px] uppercase tracking-widest group-hover:gap-4 transition-all">
+                      <div className="flex items-center gap-2 text-brand-blue font-bold text-[10px]  group-hover:gap-4 transition-all">
                         Read More <ArrowRight size={14} />
                       </div>
                     </div>
@@ -239,19 +244,19 @@ export default function NewsPage() {
 
           {/* Pagination */}
           <Reveal className="mt-20 flex justify-center items-center gap-4">
-            <button className="w-12 h-12 flex items-center justify-center border border-gray-200 dark:border-gray-800 text-gray-400 hover:text-brand-blue transition-colors">
+            <Button variant="outline" size="icon">
               1
-            </button>
-            <button className="w-12 h-12 flex items-center justify-center bg-brand-blue text-white">
+            </Button>
+            <Button variant="default" size="icon">
               2
-            </button>
-            <button className="w-12 h-12 flex items-center justify-center border border-gray-200 dark:border-gray-800 text-gray-400 hover:text-brand-blue transition-colors">
+            </Button>
+            <Button variant="outline" size="icon">
               3
-            </button>
+            </Button>
             <span className="text-gray-400">...</span>
-            <button className="w-12 h-12 flex items-center justify-center border border-gray-200 dark:border-gray-800 text-gray-400 hover:text-brand-blue transition-colors">
+            <Button variant="outline" size="icon">
               12
-            </button>
+            </Button>
           </Reveal>
         </div>
       </section>
@@ -267,7 +272,7 @@ export default function NewsPage() {
               { label: "Years of Community", val: "35" },
             ].map((stat, i) => (
               <Reveal key={i} delay={i * 0.1}>
-                <p className="text-xs font-bold uppercase tracking-[0.4em] text-blue-300 mb-2">
+                <p className="text-xs font-bold  text-blue-300 mb-2">
                   {stat.label}
                 </p>
                 <p className="text-5xl font-bold">{stat.val}</p>
@@ -296,12 +301,12 @@ export default function NewsPage() {
                 accurate coverage of our mission.
               </p>
               <div className="flex flex-wrap gap-4">
-                <button className="px-8 py-4 bg-brand-burgundy text-white text-[10px] font-bold uppercase tracking-widest hover:bg-[#7a2b3a] transition-all flex items-center gap-3">
+                <Button variant="burgundy" size="lg">
                   <Download size={16} /> Download Media Kit
-                </button>
-                <button className="px-8 py-4 border border-gray-200 dark:border-gray-800 text-gray-600 dark:text-gray-300 text-[10px] font-bold uppercase tracking-widest hover:bg-gray-50 dark:hover:bg-gray-900 transition-all flex items-center gap-3">
+                </Button>
+                <Button variant="outline" size="lg">
                   <Share2 size={16} /> Share Our Story
-                </button>
+                </Button>
               </div>
             </Reveal>
             <Reveal delay={0.4} className="lg:w-1/2">

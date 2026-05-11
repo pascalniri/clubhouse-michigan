@@ -80,7 +80,7 @@ export default function ProgramsSection() {
           <motion.span
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            className="text-[#9f2943] font-semibold tracking-wider uppercase text-sm"
+            className="text-[#9f2943] font-semibold tracking-wider  text-sm"
           >
             Our Programs
           </motion.span>
@@ -119,15 +119,15 @@ export default function ProgramsSection() {
                 key={idx}
                 variants={itemVariants}
                 whileHover={{ y: -5 }}
-                className="bg-white dark:bg-gray-800 p-8 rounded-2xl border border-gray-100 dark:border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 group"
+                className="bg-white dark:bg-gray-800 p-8 rounded border border-gray-100 dark:border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 group"
               >
-                <div className="w-12 h-12 bg-[#9f2943]/5 dark:bg-[#9f2943]/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#9f2943] transition-colors duration-300">
+                <div className="w-12 h-12 bg-[#9f2943]/5 dark:bg-[#9f2943]/10 rounded flex items-center justify-center mb-6 group-hover:bg-[#9f2943] transition-colors duration-300">
                   <Icon
                     size={24}
                     className="text-[#9f2943] dark:text-[#ff5577] group-hover:text-white transition-colors duration-300"
                   />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-3">
+                <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-gray-100 mb-3">
                   {program.title}
                 </h3>
                 <p className="text-gray-600 dark:text-gray-400 leading-relaxed">

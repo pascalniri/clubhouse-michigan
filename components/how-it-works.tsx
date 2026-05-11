@@ -5,6 +5,7 @@ import { Briefcase, Home, GraduationCap, HeartHandshake } from "lucide-react";
 import Link from "next/link";
 import TypingText from "@/components/typing-text";
 import Reveal from "@/components/reveal";
+import { Button } from "@/components/ui/button";
 
 const pillars = [
   {
@@ -54,9 +55,9 @@ export default function HowItWorks() {
             </p>
 
             <Link href="#find">
-              <button className="flex items-center justify-center md:block px-6 py-3 text-xs font-bold bg-white text-[#7B5BF2] transition-colors hover:bg-gray-100 shadow-lg">
+              <Button variant="secondary" className="w-full sm:w-auto">
                 FIND YOUR CLUBHOUSE
-              </button>
+              </Button>
             </Link>
           </Reveal>
 
@@ -64,11 +65,11 @@ export default function HowItWorks() {
           <div className="w-full lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-4">
             {pillars.map((pillar, idx) => (
               <Reveal key={idx} delay={idx * 0.1}>
-                <div className="bg-white p-6 rounded-lg shadow-xl flex flex-col items-start h-full">
+                <div className="bg-white p-6 rounded shadow-xl flex flex-col items-start h-full">
                   <div className="w-12 h-12 bg-[#F4F4FA] rounded-full flex items-center justify-center mb-4">
                     {pillar.icon}
                   </div>
-                  <h3 className="text-xl font-bold text-brand-blue mb-2">
+                  <h3 className="text-xl md:text-2xl font-bold text-brand-blue mb-2">
                     {pillar.title}
                   </h3>
                   <p className="text-[#4A4A68] text-sm leading-relaxed font-medium">

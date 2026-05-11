@@ -14,6 +14,7 @@ import {
   Users,
   Quote,
 } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const Reveal = ({
   children,
@@ -65,7 +66,7 @@ export default function ContactPage() {
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.2 }}
-                  className="text-xs font-bold uppercase tracking-[0.4em] text-blue-300"
+                  className="text-xs font-bold  text-blue-300"
                 >
                   Contact Us
                 </motion.p>
@@ -149,15 +150,13 @@ export default function ContactPage() {
                 <div className="mb-8 p-6 bg-white/5 group-hover:bg-white/10 transition-colors">
                   {item.icon}
                 </div>
-                <h3 className="text-xl font-bold mb-4 uppercase tracking-widest">
-                  {item.title}
-                </h3>
+                <h3 className="text-2xl md:text-3xl font-bold mb-4 uppercase tracking-widest">{item.title}</h3>
                 <p className="text-blue-100/70 text-sm leading-relaxed mb-10 h-20">
                   {item.desc}
                 </p>
-                <button className="px-8 py-3 bg-white text-[#1a3a5a] text-[10px] font-bold uppercase tracking-widest hover:bg-blue-50 transition-all w-full">
+                <Button variant="secondary" className="w-full">
                   {item.cta}
-                </button>
+                </Button>
               </motion.div>
             ))}
           </div>
@@ -192,7 +191,7 @@ export default function ContactPage() {
                 </p>
                 <div className="flex items-center gap-4">
                   <div className="h-px w-12 bg-brand-burgundy" />
-                  <p className="text-xs font-bold uppercase tracking-[0.3em] text-gray-400">
+                  <p className="text-xs font-bold  text-gray-400">
                     Sarah M., Clubhouse Member
                   </p>
                 </div>
@@ -221,9 +220,7 @@ export default function ContactPage() {
                 has navigated mental health challenges. Our goal is to ensure
                 you have the tools and support system needed to thrive.
               </p>
-              <button className="px-10 py-4 bg-[#1a3a5a] text-white text-[10px] font-bold uppercase tracking-widest hover:bg-brand-blue transition-all">
-                View All Resources
-              </button>
+              <Button size="lg">View All Resources</Button>
             </Reveal>
             <Reveal delay={0.4} className="lg:w-1/2 relative">
               <div className="aspect-square bg-gray-200 dark:bg-gray-800 relative shadow-2xl">
@@ -250,9 +247,9 @@ export default function ContactPage() {
                 Clubhouse community near you. Experience the work-ordered day
                 first-hand by scheduling a tour today.
               </p>
-              <button className="px-10 py-4 bg-brand-burgundy text-white text-[10px] font-bold uppercase tracking-widest hover:bg-[#7a2b3a] transition-all">
+              <Button variant="burgundy" size="lg">
                 Find a Location
-              </button>
+              </Button>
             </Reveal>
             <Reveal delay={0.4} className="lg:w-1/2 relative">
               <div className="aspect-square bg-gray-200 dark:bg-gray-800 relative shadow-2xl">
@@ -272,7 +269,7 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-start">
             <Reveal className="space-y-12">
               <div className="space-y-4">
-                <h2 className="text-4xl font-bold text-gray-900 dark:text-white">
+                <h2 className="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white">
                   Get in Touch
                 </h2>
                 <p className="text-gray-500 text-sm">
@@ -303,7 +300,7 @@ export default function ContactPage() {
                       {info.icon}
                     </div>
                     <div>
-                      <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1">
+                      <p className="text-[10px] font-bold text-gray-400  mb-1">
                         {info.label}
                       </p>
                       <p className="text-sm font-bold text-gray-900 dark:text-white">
@@ -317,9 +314,7 @@ export default function ContactPage() {
 
             <Reveal delay={0.4}>
               <div className="bg-gray-50 dark:bg-gray-900 p-12 shadow-inner border border-gray-100 dark:border-gray-800">
-                <h3 className="text-2xl font-bold mb-8 uppercase tracking-tight">
-                  Send a Message
-                </h3>
+                <h3 className="text-2xl md:text-3xl font-bold mb-8 uppercase tracking-tight">Send a Message</h3>
                 <form className="space-y-6">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <input
@@ -343,9 +338,9 @@ export default function ContactPage() {
                     placeholder="Your Message"
                     className="w-full px-6 py-4 bg-white dark:bg-gray-800 border-none text-sm outline-none focus:ring-2 focus:ring-brand-blue transition-all resize-none"
                   ></textarea>
-                  <button className="w-full px-8 py-4 bg-[#1a3a5a] text-white text-xs font-bold uppercase tracking-widest hover:bg-brand-blue transition-all flex items-center justify-center gap-3">
+                  <Button className="w-full gap-3">
                     Send Message <Send size={14} />
-                  </button>
+                  </Button>
                 </form>
               </div>
             </Reveal>
@@ -360,9 +355,9 @@ export default function ContactPage() {
             <h2 className="text-3xl md:text-5xl font-bold">
               Become an advocate and help us create a more supportive world.
             </h2>
-            <button className="px-12 py-4 bg-white text-[#1a3a5a] text-xs font-bold uppercase tracking-widest hover:bg-blue-50 transition-all">
+            <Button variant="secondary" size="lg">
               Become an Advocate
-            </button>
+            </Button>
           </div>
         </Reveal>
       </section>
