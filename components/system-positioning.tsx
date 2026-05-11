@@ -11,7 +11,7 @@ export default function SystemPositioning() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="bg-white dark:bg-gray-900 rounded-lg p-8 md:p-16 shadow-xl border border-gray-100 dark:border-gray-800 relative overflow-hidden"
+          className="bg-white dark:bg-gray-900 rounded p-8 md:p-16 shadow-xl border border-gray-100 dark:border-gray-800 relative overflow-hidden"
         >
           {/* Decorative element */}
           <div className="absolute top-0 right-0 w-32 h-32 bg-[#923445] rounded-bl-full opacity-10 transform translate-x-10 -translate-y-10"></div>

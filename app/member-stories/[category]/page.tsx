@@ -6,6 +6,7 @@ import Link from "next/link";
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 import { useParams } from "next/navigation";
+import { Button } from "@/components/ui/button";
 
 const stories = [
   {
@@ -66,7 +67,7 @@ export default function CategoryStoriesPage() {
         <div className="max-w-7xl mx-auto">
           <Link
             href="/member-stories"
-            className="text-sm font-bold text-white/70 hover:text-white transition-colors mb-8 inline-block uppercase tracking-widest"
+            className="text-sm font-bold text-white/70 hover:text-white transition-colors mb-8 inline-block "
           >
             &larr; Back to all stories
           </Link>
@@ -125,9 +126,7 @@ export default function CategoryStoriesPage() {
                 More stories coming soon to this category.
               </p>
               <Link href="/member-stories">
-                <button className="mt-8 px-6 py-3 text-xs font-bold bg-brand-blue text-white uppercase tracking-widest">
-                  EXPLORE OTHER CATEGORIES
-                </button>
+                <Button>EXPLORE OTHER CATEGORIES</Button>
               </Link>
             </div>
           )}

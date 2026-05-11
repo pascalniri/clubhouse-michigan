@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
-import { Shadows_Into_Light } from "next/font/google";
+import { Shadows_Into_Light, Geist } from "next/font/google";
 import "./globals.css";
 import { Providers } from "@/components/providers";
+import { cn } from "@/lib/utils";
+
+const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 const shadowsIntoLight = Shadows_Into_Light({
   variable: "--font-shadows-into-light",
@@ -44,7 +47,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={cn("font-sans", geist.variable)}>
       <body
         className={`${shadowsIntoLight.variable} antialiased text-sm font-sans`}
       >

@@ -53,7 +53,7 @@ export default function AboutSection() {
             className="flex items-center justify-center gap-2 mb-4"
           >
             <span className="w-12 h-[2px] bg-[#9f2943]" />
-            <span className="text-[#9f2943] font-semibold tracking-wider uppercase text-sm">
+            <span className="text-[#9f2943] font-semibold tracking-wider  text-sm">
               About Us
             </span>
             <span className="w-12 h-[2px] bg-[#9f2943]" />
@@ -96,7 +96,7 @@ export default function AboutSection() {
             transition={{ duration: 0.6 }}
             className="relative"
           >
-            <div className="relative h-[550px] w-full rounded-2xl overflow-hidden shadow-2xl">
+            <div className="relative h-[550px] w-full rounded overflow-hidden shadow-2xl">
               <Image
                 src="/clubhouse_michigan_hero.webp"
                 alt="Clubhouse Community Activity"
@@ -111,7 +111,7 @@ export default function AboutSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.4 }}
-                className="absolute bottom-8 left-8 right-8 bg-white/95 dark:bg-gray-800/95 backdrop-blur-md p-6 rounded-xl border-l-4 border-[#9f2943] dark:border-[#ff5577] shadow-lg"
+                className="absolute bottom-8 left-8 right-8 bg-white/95 dark:bg-gray-800/95 backdrop-blur-md p-6 rounded border-l-4 border-[#9f2943] dark:border-[#ff5577] shadow-lg"
               >
                 <p className="text-gray-800 dark:text-gray-200 font-medium italic mb-2">
                   "Clubhouse is a place where you go to find out who you are or
@@ -192,12 +192,12 @@ export default function AboutSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 * idx }}
-              className="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 text-center hover:shadow-md transition-shadow"
+              className="bg-white dark:bg-gray-800 p-6 rounded shadow-sm border border-gray-100 dark:border-gray-700 text-center hover:shadow-md transition-shadow"
             >
               <h4 className="text-3xl md:text-4xl font-bold text-[#9f2943] dark:text-[#ff5577] mb-2">
                 {stat.value}
               </h4>
-              <p className="text-sm text-gray-500 dark:text-gray-400 font-medium uppercase tracking-wide">
+              <p className="text-sm text-gray-500 dark:text-gray-400 font-medium ">
                 {stat.label}
               </p>
             </motion.div>
@@ -216,11 +216,11 @@ export default function AboutSection() {
                 viewport={{ once: true }}
                 transition={{ delay: 0.2 * idx }}
                 whileHover={{ y: -10 }}
-                className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700 relative overflow-hidden group"
+                className="bg-white dark:bg-gray-800 p-8 rounded shadow-lg border border-gray-100 dark:border-gray-700 relative overflow-hidden group"
               >
                 <div className="absolute top-0 right-0 w-24 h-24 bg-[#9f2943]/5 dark:bg-[#9f2943]/10 rounded-bl-full -mr-4 -mt-4 transition-transform group-hover:scale-150" />
 
-                <div className="w-14 h-14 bg-[#9f2943]/10 dark:bg-[#9f2943]/20 text-[#9f2943] dark:text-[#ff5577] rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#9f2943] group-hover:text-white transition-colors duration-300">
+                <div className="w-14 h-14 bg-[#9f2943]/10 dark:bg-[#9f2943]/20 text-[#9f2943] dark:text-[#ff5577] rounded flex items-center justify-center mb-6 group-hover:bg-[#9f2943] group-hover:text-white transition-colors duration-300">
                   <Icon size={28} />
                 </div>
 

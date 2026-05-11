@@ -51,7 +51,7 @@ export default function CTASection() {
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className={`
-                      flex flex-col items-center justify-center gap-3 p-6 rounded-2xl transition-all font-bold
+                      flex flex-col items-center justify-center gap-3 p-6 rounded transition-all font-bold
                       ${
                         item.primary
                           ? "bg-white text-rose-600 shadow-xl"

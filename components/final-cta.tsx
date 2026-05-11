@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 export default function FinalCTA() {
   return (
@@ -11,7 +12,7 @@ export default function FinalCTA() {
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          className="bg-[#F4F4FA] dark:bg-gray-900 rounded-lg p-12 md:p-20 shadow-sm border border-gray-100 dark:border-gray-800"
+          className="bg-[#F4F4FA] dark:bg-gray-900 rounded p-12 md:p-20 shadow-sm border border-gray-100 dark:border-gray-800"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-brand-blue dark:text-white mb-6 tracking-tight">
             Everyone deserves a <br />
@@ -25,14 +26,12 @@ export default function FinalCTA() {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
             <Link href="#contact" className="w-full sm:w-auto">
-              <button className="w-full flex items-center justify-center md:block px-6 py-3 text-xs font-bold bg-brand-blue text-white transition-colors hover:bg-[#1E3C5D]">
-                JOIN THE MISSION
-              </button>
+              <Button className="w-full sm:w-auto">JOIN THE MISSION</Button>
             </Link>
             <Link href="/about" className="w-full sm:w-auto">
-              <button className="w-full flex items-center justify-center md:block px-6 py-3 text-xs font-bold bg-white dark:bg-gray-800 text-brand-blue dark:text-white border border-brand-blue dark:border-white/20 transition-colors hover:bg-[#F4F4FA] dark:hover:bg-gray-700">
+              <Button variant="outline" className="w-full sm:w-auto">
                 LEARN MORE
-              </button>
+              </Button>
             </Link>
           </div>
         </motion.div>

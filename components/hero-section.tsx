@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import TypingText from "@/components/typing-text";
 import Reveal from "@/components/reveal";
+import { Button } from "@/components/ui/button";
 
 export default function HeroSection() {
   return (
@@ -45,14 +46,14 @@ export default function HeroSection() {
               className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto mt-8"
             >
               <Link href="#locate" className="w-full sm:w-auto">
-                <button className="w-full flex items-center justify-center md:block px-6 py-3 text-xs font-bold bg-brand-blue text-white  transition-colors hover:bg-[#1E3C5D] cursor-pointer">
+                <Button className="w-full sm:w-auto">
                   LOCATE A CLUBHOUSE
-                </button>
+                </Button>
               </Link>
               <Link href="#donate" className="w-full sm:w-auto">
-                <button className="w-full flex items-center justify-center md:block px-6 py-3 text-xs font-bold bg-white text-brand-blue  transition-colors hover:bg-white/90 cursor-pointer">
+                <Button variant="secondary" className="w-full sm:w-auto">
                   DONATE
-                </button>
+                </Button>
               </Link>
             </motion.div>
           </div>
@@ -162,9 +163,9 @@ export default function HeroSection() {
             living with mental illness.
           </p>
           <Link href="#impact">
-            <button className="bg-brand-blue hover:bg-[#1E3C5D] text-white px-6 cursor-pointer py-3 font-bold text-xs tracking-wide transition-colors">
+            <Button>
               READ THE REPORT
-            </button>
+            </Button>
           </Link>
         </Reveal>
       </div>

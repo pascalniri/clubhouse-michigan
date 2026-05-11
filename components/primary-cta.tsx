@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { MapPin, Search } from "lucide-react";
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 export default function PrimaryCTA() {
   return (
@@ -25,9 +26,9 @@ export default function PrimaryCTA() {
           </p>
 
           <div className="flex items-center justify-center">
-            <button className=" flex flex-row items-center px-6 py-3 text-xs font-bold bg-brand-burgundy text-white shadow-lg hover:bg-[#a84457] transition-colors justify-center gap-2">
-              Start Now, Righ now!
-            </button>
+              <Button variant="burgundy" size="lg">
+                Start Now, Right now!
+              </Button>
           </div>
         </motion.div>
       </div>

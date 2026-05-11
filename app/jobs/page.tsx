@@ -14,6 +14,7 @@ import {
   Users,
   Heart,
 } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const Reveal = ({
   children,
@@ -105,7 +106,7 @@ export default function JobsPage() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-xs font-bold uppercase tracking-[0.4em] text-blue-300 mb-6"
+            className="text-xs font-bold  text-blue-300 mb-6"
           >
             Careers
           </motion.p>
@@ -147,9 +148,12 @@ export default function JobsPage() {
               placeholder="Search by job title or location..."
               className="w-full pl-16 pr-32 py-5 bg-white rounded-none text-gray-900 shadow-2xl focus:ring-4 focus:ring-white/20 outline-none transition-all text-sm font-medium"
             />
-            <button className="absolute right-2 top-2 bottom-2 px-8 bg-brand-burgundy text-white text-xs font-bold uppercase tracking-widest hover:bg-[#7a2b3a] transition-all flex items-center gap-2">
+            <Button
+              variant="burgundy"
+              className="absolute right-2 top-2 bottom-2"
+            >
               Search Positions
-            </button>
+            </Button>
           </motion.div>
         </div>
       </section>
@@ -159,7 +163,7 @@ export default function JobsPage() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex flex-col md:flex-row md:items-center justify-between mb-16 gap-8">
             <Reveal>
-              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-2 uppercase tracking-tight">
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-2 ">
                 Available Positions
               </h2>
               <p className="text-gray-500">
@@ -167,10 +171,10 @@ export default function JobsPage() {
               </p>
             </Reveal>
             <Reveal delay={0.2} className="flex items-center gap-4">
-              <button className="flex items-center gap-3 px-6 py-3 border border-gray-100 dark:border-gray-800 text-xs font-bold uppercase tracking-widest hover:bg-gray-50 dark:hover:bg-gray-900 transition-all">
+              <Button variant="outline" size="sm">
                 <Filter size={14} /> Filter
-              </button>
-              <select className="px-6 py-3 border border-gray-100 dark:border-gray-800 text-xs font-bold uppercase tracking-widest bg-transparent outline-none">
+              </Button>
+              <select className="px-6 py-3 border border-gray-100 dark:border-gray-800 text-xs font-bold  bg-transparent outline-none">
                 <option>All Locations</option>
                 <option>Lansing</option>
                 <option>Detroit</option>
@@ -187,10 +191,10 @@ export default function JobsPage() {
 
                   <div className="space-y-3 relative z-10">
                     <div className="flex items-center gap-3">
-                      <span className="text-[10px] font-bold text-brand-blue uppercase tracking-widest px-2 py-1 bg-brand-blue/5">
+                      <span className="text-[10px] font-bold text-brand-blue  px-2 py-1 bg-brand-blue/5">
                         {job.category}
                       </span>
-                      <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">
+                      <span className="text-[10px] font-bold text-gray-400 ">
                         {job.posted}
                       </span>
                     </div>
@@ -208,9 +212,12 @@ export default function JobsPage() {
                     </div>
                   </div>
 
-                  <button className="px-8 py-4 bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white text-[10px] font-bold uppercase tracking-[0.2em] hover:bg-brand-blue hover:text-white transition-all flex items-center gap-3 self-start md:self-center">
+                  <Button
+                    variant="default"
+                    className="gap-3 self-start md:self-center"
+                  >
                     Apply Now <ArrowRight size={14} />
-                  </button>
+                  </Button>
                 </div>
               </Reveal>
             ))}
@@ -261,9 +268,7 @@ export default function JobsPage() {
                   <div className="mb-8 p-6 bg-gray-50 dark:bg-gray-800 w-fit group-hover:bg-brand-blue/5 transition-colors">
                     {benefit.icon}
                   </div>
-                  <h3 className="text-xl font-bold mb-4 uppercase tracking-tight">
-                    {benefit.title}
-                  </h3>
+                  <h3 className="text-xl font-bold mb-4 ">{benefit.title}</h3>
                   <p className="text-gray-500 leading-relaxed text-sm">
                     {benefit.desc}
                   </p>
@@ -302,7 +307,7 @@ export default function JobsPage() {
                     <span className="w-12 h-12 shrink-0 bg-brand-burgundy/10 text-brand-burgundy flex items-center justify-center font-bold text-xl group-hover:bg-brand-burgundy group-hover:text-white transition-all duration-300">
                       {i + 1}
                     </span>
-                    <span className="text-gray-700 dark:text-gray-300 font-bold uppercase tracking-widest text-xs">
+                    <span className="text-gray-700 dark:text-gray-300 font-bold  text-xs">
                       {step}
                     </span>
                   </div>
@@ -326,9 +331,9 @@ export default function JobsPage() {
                 looking for passionate individuals to join our talent pool and
                 mission.
               </p>
-              <button className="px-10 py-5 bg-white text-[#1a3a5a] text-xs font-bold uppercase tracking-widest hover:bg-blue-50 transition-all relative z-10">
+              <Button variant="secondary" size="lg" className="relative z-10">
                 Submit Talent Interest
-              </button>
+              </Button>
             </Reveal>
           </div>
         </div>

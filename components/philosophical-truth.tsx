@@ -22,14 +22,14 @@ export default function PhilosophicalTruth() {
         <Reveal delay={0.2} className="max-w-2xl text-center md:text-left">
           <p className="text-2xl md:text-4xl font-bold text-brand-blue dark:text-white leading-tight mb-6">
             "Recovery should mean stabilization and the{" "}
-            <TypingText 
-              text="opportunity" 
-              className="font-script text-3xl md:text-5xl text-brand-burgundy inline-block" 
+            <TypingText
+              text="opportunity"
+              className="font-script text-3xl md:text-5xl text-brand-burgundy inline-block"
             />{" "}
             to build a meaningful life in a community. Everyone deserves the
             opportunity to contribute, belong, and build a meaningful life."
           </p>
-          <p className="text-xl text-[#4A4A68] dark:text-gray-400 font-bold tracking-widest uppercase font-script">
+          <p className="text-xl text-[#4A4A68] dark:text-gray-400 font-bold tracking-widest  font-script">
             – The Clubhouse Philosophy
           </p>
         </Reveal>

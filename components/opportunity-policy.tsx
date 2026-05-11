@@ -51,7 +51,7 @@ export default function OpportunityPolicy() {
           transition={{ duration: 0.6 }}
           className="lg:w-1/2 w-full"
         >
-          <div className="bg-[#5B3BC4] rounded-lg p-8 md:p-12 text-white relative overflow-hidden shadow-2xl">
+          <div className="bg-[#5B3BC4] rounded p-8 md:p-12 text-white relative overflow-hidden shadow-2xl">
             <div className="absolute top-0 right-0 w-64 h-64 bg-[#7B5BF2] rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 opacity-50"></div>
             <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#FF5A36] rounded-full blur-3xl translate-y-1/2 -translate-x-1/3 opacity-20"></div>
 

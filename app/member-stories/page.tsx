@@ -7,6 +7,7 @@ import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 import TypingText from "@/components/typing-text";
 import Reveal from "@/components/reveal";
+import { Button } from "@/components/ui/button";
 
 const storyCategories = [
   {
@@ -111,7 +112,7 @@ export default function MemberStoriesPage() {
                         {category.description}
                       </p>
 
-                      <div className="inline-flex items-center gap-2 text-xs font-bold tracking-widest uppercase text-brand-blue group-hover:gap-4 transition-all">
+                      <div className="inline-flex items-center gap-2 text-xs font-bold tracking-widest  text-brand-blue group-hover:gap-4 transition-all">
                         Read Stories <span>&rarr;</span>
                       </div>
                     </div>
@@ -133,9 +134,9 @@ export default function MemberStoriesPage() {
             Your journey could be the inspiration someone else needs to take
             their first step toward recovery. We would love to hear from you.
           </p>
-          <button className="px-8 py-4 text-xs font-bold bg-brand-burgundy text-white tracking-widest uppercase transition-colors hover:bg-[#7D2D3B]">
+          <Button variant="burgundy" size="lg">
             SHARE YOUR STORY
-          </button>
+          </Button>
         </Reveal>
       </section>
 
