@@ -55,12 +55,12 @@ export default function MemberStoriesPage() {
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-white text-5xl md:text-5xl lg:text-[70px] font-bold tracking-tight leading-tight"
+            className="text-white text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-tight"
           >
             Real People. <br />
             <TypingText
               text="Real Recovery."
-              className="font-script text-6xl md:text-7xl lg:text-[90px] font-normal tracking-wide text-white/90"
+              className="font-script text-6xl md:text-7xl lg:text-9xl font-normal tracking-wide text-white/90"
               delay={0.5}
             />
           </motion.h1>
@@ -104,7 +104,7 @@ export default function MemberStoriesPage() {
                       </div>
 
                       <h2
-                        className={`text-3xl md:text-4xl font-bold mb-4 ${category.accent}`}
+                        className={`text-3xl md:text-5xl font-bold mb-4 ${category.accent}`}
                       >
                         {category.title}
                       </h2>

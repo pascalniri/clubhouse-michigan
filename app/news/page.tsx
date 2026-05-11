@@ -222,7 +222,7 @@ export default function NewsPage() {
                     <span className="text-[10px] font-bold text-gray-400  mb-4 block">
                       Blog
                     </span>
-                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4 group-hover:text-brand-blue transition-colors leading-tight">
+                    <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-4 group-hover:text-brand-blue transition-colors leading-tight">
                       {article.title}
                     </h3>
                     <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed mb-8 flex-1">

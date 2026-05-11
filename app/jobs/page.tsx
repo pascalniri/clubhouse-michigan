@@ -163,7 +163,7 @@ export default function JobsPage() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex flex-col md:flex-row md:items-center justify-between mb-16 gap-8">
             <Reveal>
-              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-2 ">
+              <h2 className="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white mb-2">
                 Available Positions
               </h2>
               <p className="text-gray-500">

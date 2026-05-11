@@ -205,7 +205,7 @@ export default function Navigation() {
                                 className="flex gap-4 p-4 rounded hover:bg-gray-50 dark:hover:bg-white/5 transition-all group/item"
                               >
                                 <div
-                                  className={`w-12 h-12 rounded ${subItem.color} flex items-center justify-center text-white shadow-lg group-hover/item:scale-110 transition-transform`}
+                                  className={`w-12 h-12 rounded ${subItem.color} flex items-center justify-center text-white shadow-lg  transition-transform`}
                                 >
                                   <subItem.icon size={22} />
                                 </div>
@@ -226,16 +226,6 @@ export default function Navigation() {
                               </Link>
                             </motion.div>
                           ))}
-                        </div>
-
-                        {/* Dropdown Footer */}
-                        <div className="bg-gray-50 dark:bg-white/5 p-4 flex justify-center border-t border-gray-100 dark:border-gray-800">
-                          <Link
-                            href="/about"
-                            className="text-[10px] font-bold  text-brand-blue hover:text-brand-burgundy transition-colors"
-                          >
-                            Explore our full mission and values
-                          </Link>
                         </div>
                       </motion.div>
                     )}

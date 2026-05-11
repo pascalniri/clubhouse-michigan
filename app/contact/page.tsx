@@ -150,7 +150,7 @@ export default function ContactPage() {
                 <div className="mb-8 p-6 bg-white/5 group-hover:bg-white/10 transition-colors">
                   {item.icon}
                 </div>
-                <h3 className="text-xl font-bold mb-4 ">{item.title}</h3>
+                <h3 className="text-2xl md:text-3xl font-bold mb-4 uppercase tracking-widest">{item.title}</h3>
                 <p className="text-blue-100/70 text-sm leading-relaxed mb-10 h-20">
                   {item.desc}
                 </p>
@@ -269,7 +269,7 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-start">
             <Reveal className="space-y-12">
               <div className="space-y-4">
-                <h2 className="text-4xl font-bold text-gray-900 dark:text-white">
+                <h2 className="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white">
                   Get in Touch
                 </h2>
                 <p className="text-gray-500 text-sm">
@@ -314,7 +314,7 @@ export default function ContactPage() {
 
             <Reveal delay={0.4}>
               <div className="bg-gray-50 dark:bg-gray-900 p-12 shadow-inner border border-gray-100 dark:border-gray-800">
-                <h3 className="text-2xl font-bold mb-8 ">Send a Message</h3>
+                <h3 className="text-2xl md:text-3xl font-bold mb-8 uppercase tracking-tight">Send a Message</h3>
                 <form className="space-y-6">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <input

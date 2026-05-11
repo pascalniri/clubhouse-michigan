@@ -55,7 +55,7 @@ export default function PartnerPortalPage() {
                 <div className="w-14 h-14 bg-brand-blue text-white rounded flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
                   <item.icon size={28} />
                 </div>
-                <h3 className="text-xl font-bold text-brand-blue dark:text-white mb-4">
+                <h3 className="text-2xl md:text-3xl font-bold text-brand-blue dark:text-white mb-4">
                   {item.title}
                 </h3>
                 <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-8">
@@ -97,7 +97,7 @@ export default function PartnerPortalPage() {
             </div>
             <div className="lg:w-1/2">
               <Reveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-brand-blue dark:text-white mb-8 leading-tight">
+                <h2 className="text-3xl md:text-5xl font-bold text-brand-blue dark:text-white mb-8 leading-tight">
                   Strengthening our <br />
                   state-wide network.
                 </h2>

@@ -69,7 +69,7 @@ export default function HowItWorks() {
                   <div className="w-12 h-12 bg-[#F4F4FA] rounded-full flex items-center justify-center mb-4">
                     {pillar.icon}
                   </div>
-                  <h3 className="text-xl font-bold text-brand-blue mb-2">
+                  <h3 className="text-xl md:text-2xl font-bold text-brand-blue mb-2">
                     {pillar.title}
                   </h3>
                   <p className="text-[#4A4A68] text-sm leading-relaxed font-medium">

@@ -67,7 +67,7 @@ export default function TheProblem() {
                 >
                   {problem.icon}
                 </div>
-                <h3 className="text-2xl font-bold text-brand-blue dark:text-white mb-4">
+                <h3 className="text-2xl md:text-3xl font-bold text-brand-blue dark:text-white mb-4">
                   {problem.title}
                 </h3>
                 <p className="text-[#4A4A68] dark:text-gray-400 text-sm leading-relaxed font-medium">

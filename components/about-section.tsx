@@ -140,7 +140,7 @@ export default function AboutSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-4">
+              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-gray-100 mb-4">
                 Our Role & Mission
               </h3>
               <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
@@ -224,7 +224,7 @@ export default function AboutSection() {
                   <Icon size={28} />
                 </div>
 
-                <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-3 group-hover:text-[#9f2943] dark:group-hover:text-[#ff5577] transition-colors">
+                <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-gray-100 mb-3 group-hover:text-[#9f2943] dark:group-hover:text-[#ff5577] transition-colors">
                   {feature.title}
                 </h3>
                 <p className="text-gray-600 dark:text-gray-400 leading-relaxed">

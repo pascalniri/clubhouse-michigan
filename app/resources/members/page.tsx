@@ -69,7 +69,7 @@ export default function MemberResourcesPage() {
                     <div className="w-12 h-12 bg-brand-blue/10 rounded flex items-center justify-center mb-4 text-brand-blue">
                       <item.icon size={24} />
                     </div>
-                    <h3 className="text-2xl font-bold text-brand-blue dark:text-white mb-2">
+                    <h3 className="text-2xl md:text-3xl font-bold text-brand-blue dark:text-white mb-2">
                       {item.title}
                     </h3>
                     <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">

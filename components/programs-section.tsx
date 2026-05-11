@@ -127,7 +127,7 @@ export default function ProgramsSection() {
                     className="text-[#9f2943] dark:text-[#ff5577] group-hover:text-white transition-colors duration-300"
                   />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-3">
+                <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-gray-100 mb-3">
                   {program.title}
                 </h3>
                 <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
