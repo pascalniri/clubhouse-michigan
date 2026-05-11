@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, Variants } from "framer-motion";
 import {
   Menu,
   X,
@@ -97,7 +97,7 @@ const animations = {
     },
     exit: { opacity: 0, y: 10, scale: 0.95, transition: { duration: 0.2 } },
   },
-} as const;
+} satisfies Record<string, Variants>;
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
